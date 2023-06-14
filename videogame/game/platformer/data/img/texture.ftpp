@@ -1,0 +1,37 @@
+{
+  "meta": {
+    "version": "0.6.7"
+  },
+  "savePath": "C:\\Users\\JonBj\\OneDrive\\Dokumenter\\IBA\\Professionsbachelor i Webudvikling\\2 semester\\projekt 3\\kode\\webudvikler-2-semester-projekt-3\\game\\platformer\\data\\img",
+  "images": [],
+  "folders": [
+    "C:/Users/JonBj/OneDrive/Dokumenter/IBA/Professionsbachelor i Webudvikling/2 semester/projekt 3/kode/webudvikler-2-semester-projekt-3/platformer/data/img/assets"
+  ],
+  "packOptions": {
+    "textureName": "texture",
+    "textureFormat": "png",
+    "removeFileExtension": false,
+    "prependFolderName": false,
+    "base64Export": false,
+    "tinify": false,
+    "tinifyKey": "",
+    "scale": 1,
+    "filter": "none",
+    "exporter": "JSON (array)",
+    "fileName": "pack-result",
+    "savePath": "C:\\Users\\JonBj\\OneDrive\\Dokumenter\\IBA\\Professionsbachelor i Webudvikling\\2 semester\\projekt 3\\kode\\webudvikler-2-semester-projekt-3\\game\\platformer\\data\\img",
+    "width": 2048,
+    "height": 2048,
+    "fixedSize": false,
+    "powerOfTwo": true,
+    "padding": 0,
+    "extrude": 0,
+    "allowRotation": true,
+    "allowTrim": true,
+    "trimMode": "trim",
+    "alphaThreshold": "1",
+    "detectIdentical": false,
+    "packer": "OptimalPacker",
+    "packerMethod": "Automatic"
+  }
+}

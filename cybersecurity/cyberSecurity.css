@@ -1,0 +1,2120 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    font-family: 'Maven Pro', sans-serif;
+}
+
+/*Display*/
+#velkommen, #luca, #adgangskode, #småBogstaver, #forklarTal, #talGanges, #forklarTegn, #sammensæt,
+#dragDrop, #storeBogstaver, #tillykke {
+    display: flex;
+}
+
+#kategori, #indtast {
+    display: block;
+}
+
+/*Generelt*/
+#velkommen, #luca, #adgangskode, #småBogstaver, #forklarTal, #forklarTegn, #sammensæt, #storeBogstaver, #dragDrop,
+#tillykke, #godeRaad, #kopierKoder, #kategori, #indtast {
+    height: 100vh;
+    background-color: #008A69;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Beige bokse*/
+.beigeBoxS, .beigeBoxM, .beigeBoxL {
+    background-color: #FFEAD0;
+    height: 85%;
+    border-radius: 20px;
+    border: 1px solid #000000;
+    position: absolute;
+    overflow: visible;
+}
+
+.beigeBoxS {
+    width: 40%;
+}
+
+.beigeBoxM {
+    width: 45%;
+}
+
+.beigeBoxL {
+    width: 60%;
+}
+
+/*Font*/
+h1, .roundBtn, .næsteBtn, .prøvIgen, #hacket h2, .komIgang, .grid, .info, #tillykke h2, #lavetAf, #skiftLeft p,
+#skiftRight p, #kategoriValg, .hackerensFremskridt p, .talGrid p, #fornavnInput, #fornavnTal, #efterInput,
+#efternavnTal, #intro h2, #kontoKodeSkift, #talGanges h2, #talGanges h3, #ligning *, #inputFelt,
+#inputFeltKonto, .infoContent h4, .kodeData, .dragElement, .procent, .hackerensFremskridtBeige p,
+#kopierKoder p, .kontoKode, #kontoSpan {
+    font-family: 'Inconsolata', monospace;
+}
+
+#velkommen p, #luca p, #adgangskode ul, #småBogstaver p, #forklarTal p, #forklarTegn p, #sammensæt p,
+#dragDropTekst, #storeBogstaver p, #tillykkeTekst, .lilleBeigeBox {
+    font-size: 1.7em;
+    line-height: 1.5;
+}
+
+strong {
+    display: contents;
+}
+
+/*Knapper*/
+.roundBtn, .godeRaadBtn {
+    color: #623CEA;
+    border: 2px solid #623CEA;
+    border-radius: 100px;
+    padding: 3%;
+    margin: 10% 30%;
+    font-size: 1.8em;
+}
+
+.arrowBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10.5vh;
+    width: 10.5vh;
+    background-color: #ffead0;
+    border: 2px solid black;
+    font-size: 3.2em;
+    border-radius: 0.1em;
+    position: absolute;
+    bottom: 15%;
+    right: 7%;
+}
+
+.arrowBtnInput {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10.5vh;
+    width: 10.5vh;
+    background-color: #ffead0;
+    border: 2px solid black;
+    font-size: 3.2em;
+    border-radius: 0.1em;
+}
+
+.roundBtn:hover, .godeRaadBtn:hover, .arrowBtn:hover, .arrowBtnInput:hover, .dragElement:hover {
+    color: #ffffff;
+    background-color: #623CEA;
+}
+
+.prøvIgen:hover {
+    background-color: rgba(98, 60, 234, .8);
+}
+
+.roundBtn, .godeRaadBtn, .næsteBtn, .fa-info-circle, .komIgang, .arrowBtn, .arrowBtnInput, .infoClose,
+.fa-info-circle, #skiftLeft, #skiftRight, .specialTegn, .dragElement, #kontiGrid i, .prøvIgen {
+    cursor: pointer;
+}
+
+.disabledBtn {
+    color: grey;
+    border-color: grey;
+    cursor: default;
+}
+
+.disabledBtn:hover {
+    color: grey;
+    background-color: #FFEAD0;
+}
+
+.næsteBtn {
+    font-size: 2em;
+    text-decoration: underline;
+    text-underline-offset: 0.1em;
+    text-decoration-thickness: 2px;
+    position: absolute;
+    bottom: 4.5%;
+    right: 10%;
+}
+
+/*Info knappen*/
+.fa-info-circle {
+    color: #ffead0;
+    font-size: 2.5em;
+    position: absolute;
+    top: 7%;
+    right: 4%;
+}
+
+.infoWhite {
+    color: #ffffff;
+}
+
+.infoClose {
+    color: #FFEAD0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 3%;
+    font-size: 3rem;
+}
+
+.infoContent {
+    position: fixed; 
+    z-index: 1; 
+    overflow:hidden;
+    top: 7%;
+    right: 4%; 
+    width: 65vh;
+    height: 55vh;
+    border-radius: 20px;
+    background-color: #000;
+    color: #FFEAD0;
+   
+}
+
+.hidden {
+    display: none;
+}
+
+.infoContent h4 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0 0 5% 0;
+}
+
+.infoContent p {
+    padding: 0 12%;
+    font-size: 1.7rem;
+    line-height: 1.5;
+}
+
+/*Hackerbar*/
+.hackerBaren {
+    position: absolute;
+    bottom: 5vh;
+    left: 5vh;
+    color: #ffead0;
+    font-size: 1.65em;
+}
+
+.hackerensFremskridt {
+    margin-bottom: 1vh;
+}
+
+.loadingBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.bar {
+    background-color: white;
+    width: 50vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 0.8vh;
+    padding-right: 0.8vh;
+}
+
+.blackLoadingBar {
+    height: 3.2vh;
+    background-color: black;
+}
+
+#barKategori {
+    width: 27%;
+}
+
+#barTal {
+    width: 50%;
+}
+
+#barTalGanges {
+    width: 54%;
+}
+
+#barTegn {
+    width: 68%;
+}
+
+#barDragDrop {
+    width: 77%;
+}
+
+#barIndtast {
+    width: 90%;
+}
+
+.procent {
+    margin-left: 1vh;
+}
+
+.hackerBarenBeige {
+    position: absolute;
+    bottom: 5vh;
+    left: 5vh;
+    color: black;
+    font-size: 1.65em;
+}
+
+.hackerensFremskridtBeige {
+    margin-bottom: 1vh;
+}
+
+/*Generelt til de forklarende sider*/
+.lucaSidder {
+    transform: scaleX(-1);
+    max-height: 60%;
+    position: absolute;
+    bottom: -3%;
+    left: -23%;
+}
+
+#småBogstaver h2, #forklarTal h2, #forklarTegn h2, #sammensæt h2, #storeBogstaver h2 {
+    font-size: 3em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 10%;
+}
+
+#småBogstaver p, #forklarTal p, #forklarTegn p, #sammensæt p, #storeBogstaver p {
+    position: relative;
+    top: 14%;
+    left: 12%;
+}
+
+#kategoriDialog {
+    font-size: 0.9em;
+}
+
+/*Velkommen*/
+#velkommen h1, #velkommen p, .roundBtn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#velkommen h1 {
+    margin: 35% 0 4%;
+    font-size: 3.5em;
+    font-weight: 500;
+}
+
+#velkommen img, #luca img, #tillykke img, #godeRaad img, #kopierKoder img {
+    max-height: 70%;
+    position: absolute;
+    bottom: 0;
+    left: -11.5%;
+}
+
+/* Hackerangrebet - intro fasen - Screensize: 1920x1080 */
+#intro {
+    display: grid; /*grid*/
+    grid-template-columns: 1fr 1.5fr 1fr;
+    grid-template-rows: [warning-img] 1fr [udråbstegn og tekst] auto [tekst] auto [kom igang] auto;
+    height: 100vh;
+    background-color: #FFEAD0;
+    justify-items: center;
+}
+
+.warning {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    padding-top: 7vh;
+    padding-bottom: 7vh;
+    height: 100%;
+}
+
+#intro h2 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    font-size: 2.8em;
+    font-weight: 400;
+    align-self: center;
+}
+
+.udråbstegnLeft {
+    width: 6%;
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    justify-self: right;
+    animation: fadeInAnimation ease-in-out 2.3s infinite;
+    -webkit-animation: fadeInAnimation ease-in-out 2.3s infinite;
+}
+
+.udråbstegnRight {
+    width: 6%;
+    grid-row: 2 / 3;
+    grid-column: 3 / 4;
+    justify-self: left;
+    transform: scaleX(-1);
+    animation: fadeInAnimation ease-in-out 2.3s infinite;
+    -webkit-animation: fadeInAnimation ease-in-out 2.3s infinite;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInAnimation {
+    0% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
+#intro p {
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    font-size: 1.8em;
+    padding-top: 5vh;
+    padding-bottom: 8vh;
+    text-align: center;
+}
+
+.komIgang {
+    grid-row: 4 / 5;
+    grid-column: 2 / 3;
+    text-decoration: underline;
+    font-size: 1.9em;
+    padding-bottom: 12vh;
+}
+
+
+/*Luca introduktion*/
+#luca img {
+    bottom: 3%;
+    left: 5%;
+}
+
+#luca p {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 24%;
+    left: 12%;
+}
+
+#lucaBold {
+    font-weight: 500;
+}
+
+
+/*En stærk adgangskode skal have*/
+#adgangskode h3 {
+    font-size: 2em;
+    font-weight: 500;
+    position: relative;
+    top: 18%;
+    left: 15%;
+}
+
+#adgangskode ul {
+    position: relative;
+    top: 20%;
+    left: 10%;
+}
+
+#adgangskode li {
+    margin-top: 1%;
+}
+
+/*Kategori*/
+#øversteDel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 15.5vh;
+}
+
+#skiftLeft, #skiftRight {
+    display: flex;
+    flex-direction: column;
+    color: #ffead0;
+}
+
+#skiftLeft {
+    position: absolute;
+    left: 40vh;
+    align-items: flex-end;
+}
+
+
+#skiftLeft p {
+    font-size: 1.65em;
+}
+
+#skiftRight p {
+    font-size: 1.65em;
+}
+
+#skiftRight {
+    position: absolute;
+    right: 40vh;
+}
+
+#øversteDel button {
+    all: unset;
+    font-size: 50px;
+    color: #ffead0;
+}
+
+#kategoriValg {
+    margin-top: 15px;
+    font-size: 3em;
+    color: #ffead0;
+}
+
+#midterDel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+#inputFelt {
+    height: 10.5vh;
+    width: 40vw;
+    background-color: #ffead0;
+    border-style: none;
+    border-radius: 5px;
+    font-size: 2.5em;
+    padding-left: 4%;
+}
+
+.lilleBeigeBox {
+    width: 58vh;
+    height: 50vh;
+    background-color: #ffead0;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 6.5vh;
+    right: 8vh;
+    border: 2px solid;
+    padding: 4vh;
+}
+
+.lilleBeigeBox p {
+    margin-bottom: 7%;
+}
+
+.vector {
+    width: 40vh;
+    position: absolute;
+    bottom: 2vh;
+    right: 7vh;
+}
+
+
+/*Spejlvend det valgte ord*/
+#flip, #dinKode {
+    display: flex; /*flex*/
+    height: 100vh;
+    background-color: #FFEAD0;
+    flex-direction: column;
+    align-items: center;
+}
+
+#flip h2, #dinKode h2 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.7em;
+    font-weight: 400;
+    padding: 10% 0 5% 0;
+}
+
+#wordFlip, #kodeKombineret {
+    color: #623CEA;
+    font-family: 'Inconsolata', monospace;
+    font-size: 8em;
+}
+
+#flipTip {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 400;
+    line-height: 1.8em;
+    padding: 5% 0 5% 0;
+}
+
+.ladyMirror {
+    height: 22%;
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+}
+
+#flip .squareBtn {
+    color: #623CEA;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    padding: 3%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 15%;
+    right: 10%;
+}
+
+/* Vælg tal ved forbogstaverne fasen - Screensize: 1920x1080 */
+.talGrid {
+    display: grid;
+    grid-gap: 0 5%;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 5%;
+    height: 100%;
+    width: 100%;
+
+}
+
+.talGrid p {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2em;
+    height: 2.5em;
+    margin-bottom: 0.5em;
+
+}
+
+/*Tallene bliver ganget*/
+#talGanges {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FFEAD0;
+}
+
+#talGanges h2 {
+    font-size: 3em;
+    font-weight: 400;
+}
+
+#talGanges h3 {
+    font-size: 1.8em;
+    font-weight: 400;
+    margin-top: 3%;
+}
+
+#ligning {
+    display: flex;
+    font-weight: 500;
+    margin: 1% 7% 0 0;
+}
+
+#ligningLodret {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fornavnTalKasse, #efternavnTalKasse {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #623CEA;
+    border-radius: 0.1em;
+    color: #623CEA;
+    font-size: 2.2em;
+    height: 11vh;
+    width: 11vh;
+    margin: 0.4em;
+}
+
+#ligningVandret {
+    display: flex;
+    align-items: center;
+}
+
+#gange, #lig {
+    color: #623CEA;
+    font-size: 2.2em;
+    margin: 3.5vw;
+}
+
+#vælgTegn {
+    grid-template-rows: 30% 42% 28%;
+}
+
+#lig {
+    font-size: 3.2em;
+}
+
+#talGanges input {
+    text-align: center;
+    background-color: #008A69;
+    color: #FFEAD0;
+    height: 13vh;
+    width: 13vh;
+    font-size: 3em;
+    border: none;
+    border-radius: 0.1em;
+}
+
+
+/* Dit endelige tal fasen - Screensize: 1920x1080 */
+#talResultat {
+    display: flex; /*flex*/
+    height: 100vh;
+    background-color: #FFEAD0;
+    flex-direction: column;
+    align-items: center;
+}
+
+#talResultat h2{
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.7em;
+    font-weight: 400;
+    padding: 8% 0 5% 0;
+}
+
+#talResultat p{
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.8em;
+    padding: 5% 0 5% 0;
+}
+
+#talResultat .squareBtn {
+    color: #623CEA;
+    border: 2px solid #000000;
+    border-radius: 3px;
+    padding: 3%;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    bottom: 15%;
+    right: 10%;
+}
+
+#finalFornavn, #finalEfternavn {
+    color: #623CEA;
+    border: 2px solid #623CEA;
+    border-radius: 10px;
+    width: 25vh;
+    height: 25vh;
+    font-size: 11em;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  'Inconsolata', monospace;
+}
+
+#talResultat .gridBtn{
+    display: grid;
+    width: 100%;
+    grid-gap: 5%;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    align-content: center;
+}
+
+/* Vælg tegn fasen - Screensize 1920x1080 */
+#vælgTegn, #vælgTal {
+    display: grid; /*grid*/
+    background-color: #FFEAD0;
+    height: 100vh;
+}
+
+.kodeData {
+    justify-self: left;
+    padding: 6vh 0 0 6vh;
+    color: #000;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
+#vælgTegn .kodeData {
+    position: unset;
+}
+
+.antalTegn {
+    font-size: 3em;
+    text-align: inherit;
+    font-family: inherit;
+}
+
+.dinAdgangskode {
+    font-size: 2em;
+    padding: 0.5em 0 0.3em 0;
+    font-family: inherit;
+}
+
+.kodeDele {
+    font-size: 2.5em;
+    text-align: inherit;
+    font-family: inherit;
+}
+
+.grid {
+    display: grid;
+    font-size: 2.5em;
+    grid-template-rows: repeat(3, 3em);
+    grid-template-columns: repeat(10, 3em);
+    grid-gap: 0.5em;
+    justify-self: center;
+    text-align: center;
+    line-height: 3em;
+}
+
+.specialTegn {
+    border: 0.03em solid #000;
+    border-radius: 0.2em;
+    font-family: inherit;
+    background-color: #ffead0;
+}
+
+.specialTegn.active {
+    background-color: #008A69;
+    color: #ffead0;
+}
+
+.vaelgTegn {
+    font-size: 2em;
+    bottom: 20%;
+}
+
+.nextBtn {
+    height: 3em;
+    width: 3em;
+    background-color: #ffead0;
+    border-color: black;
+    font-size: 30px;
+    border-radius: 0.2em;
+    margin-right: 6em;
+    margin-left: 13.9em;
+}
+
+.underGridMinusHackerBaren {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.2em;
+}
+
+
+/*Drag and drop*/
+#dragDrop {
+    background-color: #ffead0;
+    flex-direction: column;
+}
+
+#kodeDrag, #kodeDrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    height: 14%;
+}
+
+#kodeDrop {
+    background-color: #008A69;
+    margin: 4% 0 5%;
+    border-radius: 5px;
+}
+
+.dragElement {
+    font-size: 3em;
+    color: #623CEA;
+    border: 2px solid #623CEA;
+    padding: 2vh;
+    margin: 1.5vh;
+}
+
+#kodeDrop .dragElement {
+    color: #000000;
+    background-color: #ffead0;
+    border-color: #000000;
+}
+
+/*Skift kode til konto*/
+.kodeDataGreenBg {
+    color: #ffead0;
+}
+
+.antalTegn {
+    font-size: 3em;
+    text-align: inherit;
+    font-family: inherit;
+}
+
+.dinAdgangskode {
+    font-size: 2em;
+    padding: 0.5em 0 0.3em 0;
+    font-family: inherit;
+}
+
+#kontoKodeSkift {
+    margin-top: 17vh;
+    font-size: 3em;
+    color: #ffead0;
+    text-align: center;
+}
+
+#kontoSpan {
+    text-decoration: underline;
+}
+
+#midterDelKonto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+#inputFeltKonto {
+    height: 10.5vh;
+    width: 40vw;
+    background-color: #ffead0;
+    border-style: none;
+    font-size: 2.5em;
+    padding-left: 4%;
+    border-radius: 5px;
+}
+
+.lilleBeigeBox strong {
+    color: #623CEA;
+}
+
+/*Tillykke skærm*/
+#tillykke p, #tillykke h2, #tillykke h3 {
+    text-align: center;
+    position: relative;
+}
+
+#tillykke h2 {
+    font-size: 3em;
+    font-weight: 500;
+    top: 23%;
+}
+
+#tillykke h3 {
+    font-size: 1.9em;
+    font-weight: 400;
+    top: 29%;
+}
+
+#tillykkeTekst {
+    top: 33%;
+}
+
+#lavetAf {
+    font-size: 1.4em;
+    top: 43%;
+}
+
+/* Du er blevet hacket fasen - Screensize: 1920x1080 */
+#hacket {
+    display: grid; /*grid*/
+    justify-items: center;
+    height: 100vh;
+    color: #FFEAD0;
+    background-color: #000;
+}
+
+#hacket img {
+    max-width: 25%;
+    padding: 5vh 0 8vh 0;
+}
+
+#hacket h2 {
+    font-weight: 400;
+    font-size: 3em;
+    padding: 15vh 0 3vh 0;
+}
+
+#hacket p {
+    font-size: 2em;
+    font-weight: inherit;
+}
+
+.prøvIgen {
+    background-color: #623CEA;
+    color: #FFEAD0;
+    border: 0.15em solid #623CEA;
+    width: 20%;
+    border-radius: 3em;
+    font-size: 200%;
+    height: 35%;
+    margin-bottom: 20vh;
+} 
+
+/* Tak for spil fasen - Screensize: 1920x1080 */
+#godeRaad {
+    display: flex;
+}
+
+#godeRaad img, #kopierKoder img {
+    left: -8.5%;
+}
+
+.beigeBoxL h4, .beigeBoxL h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+}
+
+.beigeBoxL p {
+    text-align: center;
+}
+
+.beigeBoxL h2 {
+    font-size: 2.7em;
+    padding-bottom: 4%;
+}
+
+.beigeBoxL h4 {
+    font-size: 1.8em;
+    padding: 7.5% 0 5% 0;
+}
+
+#passwordManager, #toTrin {
+    font-size: 1.9em;
+}
+
+#toTrin {
+    padding: 2% 0 7% 0; 
+}
+
+.btnBoks {
+    display: flex;
+    justify-content: center;
+}
+
+.godeRaadBtn {
+    margin: auto 5%;
+    width: 20%;
+    padding: 2.2%;
+    text-align: center;
+    position: absolute;
+    bottom: 12%;
+}
+
+.spilIgenBtn {
+    left: 20%;
+}
+
+#seKoderBtn, #tilbageBtn {
+    right: 20%;
+}
+
+
+/* Kopier adgangskode fasen - Screensize: 1920x1080 */
+#kopierKoder {
+    display: flex;
+}
+
+#kontiGrid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    grid-gap: 0 2.5%;
+    padding: 5.5% 0 7% 0;
+    width: 100%;
+}
+
+#kontiGrid p {
+    display: flex;
+    justify-content: start;
+    font-size: 2em;
+    height: 1.5em;;
+    margin-top: 1em;
+}
+
+.kontoKode {
+    font-size: 2.5em;
+    background-color: #008A69;
+    color: #FFEAD0;
+    border: none;
+    resize: none;
+    outline: none;
+    border-radius: 0.3rem; 
+    width: 35rem;
+    padding: 5% 2% 5% 2%;
+}
+
+#kontiGrid i {
+    font-size: 3em;
+    border: solid 1.5px;
+    border-radius: 0.3rem;
+    text-align: center;
+    align-self: center;
+    padding: 24%;
+}
+
+/*Forbogstaver > tal*/ 
+#forNavn, #fornavnTal, #efterNavn, #efternavnTal {
+    font-size: 2.5em;
+}
+
+#forNavn, #efterNavn {
+    background-color: #008A69;
+    color: #FFEAD0;
+    height: 6.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    padding: 0 2% 0 2%;
+    font-family: 'Inconsolata', monospace;
+}
+
+#forNavn::placeholder, #efterNavn::placeholder {
+    color: #FFEAD0;
+    opacity: 0.5;
+    text-transform: none;
+}
+ 
+#fornavnTal, #efternavnTal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px;
+    border-radius: 0.3rem;
+    color: #623CEA;
+    height: 6.5rem;
+    width: 6.5rem;
+    padding: 0 2% 0 2%;
+    margin: 0 auto 0 auto;
+}
+
+
+@media screen and (max-width: 1537px) {
+    /*Generelt*/
+    .antalTegn {
+        font-size: 2.4em;
+    }
+    .dinAdgangskode {
+        font-size: 1.6em;
+    }
+    .kodeDele {
+        font-size: 2em;
+    }
+    .infoContent {
+        right: 3%;
+    }
+
+    /*Beige bokse*/
+
+    /*Knapper*/
+
+    .roundBtn, .godeRaadBtn {
+        font-size: 1.4em;
+    }
+    .fa-info-circle {
+        font-size: 2em;
+    }
+    .fa-chevron-right:before {
+        font-size: 0.8em;
+    }
+    .fa-chevron-left:before {
+        font-size: 0.8em;
+    }
+
+    .arrowBtnInput {
+        height: 1.7em;
+        width: 1.7em;
+        font-size: 3.3em;
+    }
+
+    #inputFelt {
+        height: 2.8em;
+    }
+
+    .arrowBtn {
+        height: 1.7em;
+        width: 1.7em;
+        font-size: 3.3em;
+    }
+    
+
+    /*info button*/
+    .infoContent h4 {
+        font-size: 2.8em;
+    }
+    .infoContent p {
+        font-size: 1.5em;
+    }
+    .fa-times:before {
+        font-size: 0.8em;
+    }
+    .content {
+        width: 60vh;
+    }
+
+    /*Velkommen*/
+    #velkommen h1 {
+        margin: 32% 0 4%;
+        font-size: 2.7em;
+    }
+
+    #velkommen p, #luca p, #adgangskode ul, #småBogstaver p, #forklarTal p, #forklarTegn p, #sammensæt p, #storeBogstaver p, #tillykkeTekst, .lilleBeigeBox {
+        font-size: 1.2em;
+    }
+
+    #dragDropTekst {
+        font-size: 1.6em;
+    }
+
+    /* Hackerangrebet - intro fasen */
+    .warning {
+        height: 105%;
+    }
+    #intro h2 {
+        font-size: 2em;
+    }
+    .udråbstegnRight {
+        width: 5%;
+    }
+    #intro p {
+        font-size: 1.5em;
+        padding-top: 4.5vh;
+    }
+    .komIgang {
+        font-size: 1.5em;
+    }
+    /*Luca introduktion*/
+    .næsteBtn {
+        font-size: 1.6em;
+        bottom: 5%;
+    }
+
+    /*En stærk adgangskode skal have*/
+    #adgangskode h3 {
+        font-size: 1.5em;
+    }
+
+    #småBogstaver h2, #forklarTal h2, #forklarTegn h2, #sammensæt h2, #storeBogstaver h2 {
+        font-size: 2.4em;
+    }
+
+    /*Kategori*/
+    #kategoriValg {
+        margin-top: 14px;
+        font-size: 2.4em;
+    }
+    #skiftRight p {
+        font-size: 1.4em;
+    }
+    #skiftLeft p {
+        font-size: 1.4em;
+    }
+    #inputFelt {
+        font-size: 2em;
+    }
+    #kategoriDialog {
+        font-size: 0.65em;
+    }
+
+    #kontoBeigeBox{
+        font-size: 1.05em;
+    }
+
+    /*Spejlvend det valgte ord*/
+    #flip h2, #dinKode h2 {
+        font-size: 1.4em;
+    }
+    #flipTip {
+        font-size: 1.3em;
+    }
+    #wordFlip, #kodeKombineret {
+        font-size: 6.4em;
+    }
+
+    /* Vælg tal ved forbogstaverne fasen */
+    .talGrid p {
+        font-size: 1.75em;
+    }
+
+    #fornavnTal, #efternavnTal {
+        height: 2.7em;
+        width: 2.7em;
+    }
+    #forNavn, #fornavnTal, #efterNavn, #efternavnTal {
+        font-size: 2.4em;
+    }
+    /*Tallene bliver ganget*/
+    #talGanges h2 {
+        font-size: 2.4em;
+    }
+    #talGanges h3 {
+        font-size: 1.4em;
+    }
+
+    /* Dit endelige tal fasen */
+    #talResultat h2 {
+        font-size: 1.4em;
+    }
+
+    #talResultat p {
+        font-size: 1.2em;
+    }
+
+    #finalFornavn, #finalEfternavn {
+        font-size: 8.2em;
+    }
+
+    /* Vælg tegn fasen */
+    .grid {
+        font-size: 1.6em;
+    }
+
+    .vaelgTegn {
+        font-size: 1.6em;
+    }
+    /*Drag and drop*/
+    .dragElement {
+        font-size: 2.4em;
+    }
+
+
+    /*Skift kode til konto*/
+    #kontoKodeSkift {
+        font-size: 2.4em;
+    }
+    #inputFeltKonto {
+        height: 1.7em;
+        font-size: 3.3em;
+    }
+    /*Tillykke skærm*/
+    #tillykke h2 {
+        font-size: 2.4em;
+    }
+
+    #tillykke h3 {
+        font-size: 1.6em;
+    }
+
+    #lavetAf {
+        font-size: 1.1em;
+    }
+
+    /* Du er blevet hacket fasen  */
+    #hacket h2 {
+        font-size: 2.4em;
+    }
+
+    #hacket p {
+        font-size: 1.6em;
+    }
+    .prøvIgen {
+        font-size: 1.5em;
+    }
+    /* Tak for spil fasen  */
+    .beigeBoxL h4 {
+        font-size: 1.6em;
+    }
+
+    .beigeBoxL h2 {
+        font-size: 2.4em;
+    }
+
+    #passwordManager, #toTrin {
+        font-size: 1.5em;
+    }
+    /* Kopier adgangskode fasen  */
+    #kontiGrid p {
+        font-size: 1.6em;
+    }
+    .kontoKode {
+        font-size: 2em;
+    }
+    .fa-copy:before{
+        font-size: 0.7em;
+    }
+
+    .kontoKode {
+        width: 14em;
+        height: 2.5em;
+    }
+
+    #kontiGrid i {
+        height: 1.65em;    
+        padding: 12%;
+    }
+
+    #kontiGrid {
+        padding: 7% 0 7% 0;
+    }
+}
+
+
+@media screen and (max-width: 1441px) {
+    /* Generalt */
+    .beigeBoxS {
+        width: 45%;
+    }
+
+    .beigeBoxM {
+        width: 50%;
+    }
+
+    /* Kategori */
+    .lilleBeigeBox {
+        font-size: 1.5em;
+    }
+
+    #skiftLeft {
+        left: 33vh;
+    }
+
+    #skiftRight {
+        right: 33vh;
+    }
+
+    /* Indtast */ 
+    #inputFeltKonto {
+        height: 1.85em;
+        font-size: 3em;
+    }
+
+    #indtast .lilleBeigeBox {
+        font-size: 1.2em;
+    }
+
+    /* Kopier */
+    #kontiGrid {
+        padding-top: 5%;
+    }
+
+    #kategoriDialog {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 1367px) { 
+    .godeRaadBtn {
+        bottom: 9%;
+    }
+
+    #kategoriDialog {
+        font-size: 0.9em;
+    }
+
+    /*Generelt*/
+    .fa-info-circle {
+        font-size: 2em;
+    }
+
+    #velkommen p, #luca p, #adgangskode ul, #småBogstaver p, #forklarTal p, #forklarTegn p, #sammensæt p,
+    #dragDropTekst, #storeBogstaver p, #tillykkeTekst, .lilleBeigeBox {
+        font-size: 110%;
+        line-height: 1.5;
+    }
+
+    /*Om projekt knappen*/
+    .infoContent h4 {
+        font-size: 2.1em;
+    }
+
+    .infoContent p {
+        font-size: 1.3rem;
+    }
+
+    .infoClose {
+        font-size: 2.2rem;
+    }
+
+    /*Beige bokse*/
+    .beigeBoxM {
+        width: 45%;
+    }
+
+    /*Knapper*/
+
+    /*Generelt til de forklarende sider*/
+
+    /*Velkommen*/
+    #velkommen h1 {
+        margin: 35% 0 4%;
+        font-size: 2.5em;
+    }
+
+    .roundBtn {
+        padding: 2.5%;
+        margin: 10% 31%;
+        font-size: 1.4em;
+    }
+
+    /* Hackerangrebet - intro fasen */
+    .warning {
+        width: 80%;
+    }
+    
+    #intro h2 {
+        font-size: 1.85em;
+    }
+
+    .udråbstegnLeft, .udråbstegnRight {
+        width: 5.5%;
+    }
+
+    #intro p {
+        font-size: 1.35em;
+        padding-bottom: 6.5vh;
+    }
+
+    .komIgang {
+        font-size: 1.45em;
+    }
+
+    /*Luca introduktion*/
+    .næsteBtn {
+        font-size: 1.6em;
+    }
+
+    /*En stærk adgangskode skal have*/
+    #adgangskode h3 {
+        font-size: 1.55em;
+        font-weight: 400;
+    }
+
+    /*Små bogstaver*/
+    #småBogstaver h2, #forklarTal h2, #forklarTegn h2, #sammensæt h2, #storeBogstaver h2, #tillykke h2 {
+        font-size: 2.15em;
+    }
+
+    /*Kategori*/
+    #øversteDel {
+        margin-top: 14vh;
+    }
+
+    #kategoriValg {
+        font-size: 2.2em;
+    }
+
+    #skiftLeft p, #skiftRight p {
+        font-size: 1.4em;
+    }
+
+    .fa-chevron-right, .fa-chevron-left {
+        font-size: 0.75em;
+    }
+
+    #inputFelt {
+        font-size: 1.8em;
+    }
+
+    .hackerBaren, .hackerBarenBeige {
+        font-size: 1.4em;
+    }
+
+    .bar {
+        height: 4.5vh;
+    }
+
+    #barKategori, #barTal, #barTalGanges, #barTegn, #barDragDrop, #barIndtast {
+        height: 2.7vh;
+    }
+
+    .arrowBtnInput {
+        font-size: 2.8em;
+        width: 1.8em;
+        height: 1.8em;
+    }
+
+    #inputFeltKonto {
+        font-size: 2em;
+    }
+
+
+    /*Spejlvend det valgte ord*/
+
+    #flip h2 {
+        font-size: 1.3em;
+    }
+
+    #wordFlip {
+        font-size: 6em;
+    }
+
+    #flipTip {
+        font-size: 1.1em;
+    }
+
+    /* Vælg tal ved forbogstaverne fasen */
+    .antalTegn {
+        font-size: 2em;
+    }
+    
+    .dinAdgangskode {
+        font-size: 1.6em;
+    }
+
+    .kodeDele {
+        font-size: 1.8em;
+    }
+
+    .talGrid p {
+        font-size: 1.5em;
+        height: 1.5em;
+        margin-top: 1.5em;
+    }
+
+    #forNavn, #efterNavn {
+        font-size: 2em;
+        height: 6rem;
+        padding: 0 2% 0 4%;
+    }
+
+    #fornavnTal, #efternavnTal {
+        font-size: 2em;
+        height: 6rem;
+        width: 6rem;
+    }
+
+    /*Tallene bliver ganget*/
+
+    #talGanges h2 {
+        font-size: 2.2em;
+    }
+
+    #talGanges h3 {
+        font-size: 1.5em;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    #ligning {
+        margin: 1% 0 0 0;
+    }
+
+    #fornavnTalKasse, #efternavnTalKasse {
+        font-size: 2em;
+        margin: 0.3em;
+    }
+
+    #gange {
+        font-size: 2em;
+    }
+
+    #lig {
+        font-size: 2.8em;
+    }
+
+    #talGanges input {
+        font-size: 2em;
+    }
+
+    /* Dit endelige tal fasen */
+
+    #talResultat h2 {
+        font-size: 1.4em;
+    }
+
+    #finalFornavn, #finalEfternavn {
+        font-size: 6em;
+        width: 20vh;
+        height: 20vh;
+        border-radius: 6px;
+        font-weight: 400;
+    }
+
+    #talResultat p {
+        font-size: 1.05em;
+        padding: 5% 0 5% 0;
+    }
+
+    /* Vælg tegn fasen */
+
+    #vaelgTegn {
+        font-size: 1.5em;
+    }
+
+    /*Din kode*/
+    #kodeKombineret {
+        font-size: 5em;
+    }
+
+    /*Drag and drop*/
+
+    .dragElement {
+        font-size: 2.2em;
+    }
+
+    /*Skift kode til konto*/
+    
+    #indtast .kodeData {
+        color: #ffead0; 
+    }
+
+    #inputFeltKonto {
+        height: 12.5vh;
+    }
+
+    /*Tillykke skærm*/
+    
+    #tillykke h3 {
+        font-size: 1.5em;
+    }
+
+    #lavetAf {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    /* Du er blevet hacket fasen  */
+
+    #hacket h2 {
+        font-size: 2.55em;
+    }
+
+    #hacket p {
+        font-size: 1.8em;
+    }
+
+    #hacket img {
+        max-width: 27%;
+        padding: 6vh 0 0 0;
+        margin-bottom: 10vh;
+    }
+
+    .prøvIgen {
+        height: 10vh;
+        width: 25%;
+        margin-bottom: 10vh;
+        font-size: 150%;
+    }
+
+    /* Tak for spil fasen  */
+
+    .beigeBoxL h4 {
+        font-size: 1.5em;
+        padding: 6% 0 5% 0;
+    }
+
+    .beigeBoxL h2 {
+        font-size: 2em;
+        padding-bottom: 4%;
+    }
+
+    #passwordManager, #toTrin {
+        font-size: 1.3em;
+    }
+
+    .godeRaadBtn {
+        font-size: 1.4em;
+    }
+
+    /* Kopier adgangskode fasen  */
+
+    #kontiGrid p {
+        font-size: 1.45em;
+    }
+
+    .kontoKode {
+        font-size: 1.5em;
+        width: 25rem;
+        padding: 5% 3% 5% 3%;
+    }
+
+    #kontiGrid i {
+        font-size: 2em;
+        height: 1.9em;
+    }
+
+    .infoContent p {
+        font-size: 1.2em;
+    }
+
+}
+
+@media screen and (max-width: 1081px) { 
+
+    #kategoriDialog {
+        font-size: 1em;
+    }
+
+    #dragDropTekst {
+        font-size: 1.3em;
+    }
+
+    .lilleBeigeBox  {
+        font-size: 0.8em;
+    }
+    
+    /*Generelt*/
+    .fa-info-circle {
+        font-size: 1.6em;
+    }
+
+    #velkommen p, #luca p, #adgangskode ul, #småBogstaver p, #forklarTal p, #forklarTegn p, #sammensæt p,
+    #storeBogstaver p, #tillykkeTekst, .lilleBeigeBox {
+        font-size: 95%;
+        line-height: 1.5;
+    }
+
+    /*Om projekt knappen*/
+    .infoContent h4 {
+        font-size: 2.2rem;
+    }
+
+    .infoContent p {
+        font-size: 1.4rem;
+    }
+
+    .infoClose {
+        font-size: 2rem;
+    }
+
+    /*Beige bokse*/
+    .beigeBoxM {
+        width: 50%;
+    }
+
+    .beigeBoxS {
+        width: 45%;
+    }
+
+    /*Knapper*/
+
+    /*Generelt til de forklarende sider*/
+
+    /*Velkommen*/
+    #velkommen h1 {
+        margin: 38% 0 4%;
+        font-size: 2.2em;
+    }
+
+    .roundBtn {
+        padding: 2.5%;
+        margin: 10% 31%;
+        font-size: 1.2em;
+    }
+
+    /* Hackerangrebet - intro fasen */
+    .warning {
+        width: 80%;
+        padding-top: 12vh;
+    }
+
+    #intro h2 {
+        font-size: 1.5em;
+    }
+
+    .udråbstegnLeft, .udråbstegnRight {
+        width: 5.5%;
+    }
+
+    #intro p {
+        font-size: 1.2em;
+        padding-bottom: 6.5vh;
+    }
+
+    .komIgang {
+        font-size: 1.35em;
+        padding-bottom: 16vh;
+    }
+
+    /*Luca introduktion*/
+    .næsteBtn {
+        font-size: 1.4em;
+        text-decoration-thickness: 1px;
+    }
+
+    /*En stærk adgangskode skal have*/
+    #adgangskode h3 {
+        font-size: 1.3em;
+        font-weight: 400;
+    }
+
+    /*Små bogstaver*/
+    #småBogstaver h2, #forklarTal h2, #forklarTegn h2, #sammensæt h2, #storeBogstaver h2, #tillykke h2 {
+        font-size: 1.9em;
+    }
+
+    /*Kategori*/
+    #øversteDel {
+        margin-top: 14vh;
+    }
+
+    #kategoriValg {
+        font-size: 2em;
+    }
+
+    #skiftLeft p, #skiftRight p {
+        font-size: 1.1em;
+    }
+
+    #øversteDel .fa-chevron-right, #øversteDel .fa-chevron-left {
+        font-size: 0.6em;
+    }
+
+    #skiftLeft {
+        left: 30vh;
+    }
+
+    #inputFelt {
+        font-size: 1.5em;
+        height: 9vh;
+    }
+
+    #skiftRight {
+        right: 30vh;
+    }
+
+    .arrowBtnInput {
+        font-size: 2.8em;
+        width: 6vw;
+        height: 9vh;
+    }
+
+    .hackerBaren, .hackerBarenBeige {
+        font-size: 1.15em;
+    }
+
+    .bar {
+        height: 4vh;
+    }
+
+    .blackLoadingBarKategori, .blackLoadingBarTalGrid, .blackLoadingBarTalGanges, .blackLoadingBarVælgTegn, .blackLoadingBarDragDrop, .blackLoadingBar {
+        height: 2.2vh;
+    }
+
+    /*Spejlvend det valgte ord*/
+
+    #flip h2, #dinKode h2 {
+        font-size: 1.1em;
+    }
+
+    #wordFlip {
+        font-size: 5em;
+    }
+
+    #flipTip {
+        font-size: 1em;
+    }
+
+    .arrowBtn {
+        height: 9vh;
+        width: 9vh;
+        font-size: 2.8em;
+    }
+
+    /* Vælg tal ved forbogstaverne fasen */
+    .antalTegn {
+        font-size: 1.8em;
+    }
+    
+    .dinAdgangskode {
+        font-size: 1.4em;
+    }
+
+    .kodeDele {
+        font-size: 1.6em;
+    }
+
+    .talGrid p {
+        font-size: 1.5em;
+        height: 1.5em;
+        margin-top: 1.5em;
+    }
+
+    #forNavn, #efterNavn {
+        font-size: 1.8em;
+        height: 5rem;
+        padding: 0 2% 0 3%;
+    }
+
+    #fornavnTal, #efternavnTal {
+        font-size: 1.8em;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    /*Tallene bliver ganget*/
+
+    #talGanges h2 {
+        font-size: 1.9em;
+    }
+
+    #talGanges h3 {
+        font-size: 1.2em;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+
+    #ligning {
+        margin: 1% 0 0 0;
+    }
+
+    #fornavnTalKasse, #efternavnTalKasse {
+        font-size: 1.8em;
+        margin: 0.3em;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    #gange {
+        font-size: 1.8em;
+    }
+
+    #lig {
+        font-size: 2.5em;
+    }
+
+    #talGanges input {
+        font-size: 1.8em;
+        height: 5.5rem;
+        width: 5.5rem;
+    }
+
+    /* Dit endelige tal fasen */
+
+    #talResultat h2 {
+        font-size: 1.1em;
+    }
+
+    #finalFornavn, #finalEfternavn {
+        font-size: 6em;
+        width: 20vh;
+        height: 20vh;
+        border-radius: 6px;
+        font-weight: 400;
+    }
+
+    #talResultat p {
+        font-size: 1em;
+        padding: 5% 0 5% 0;
+    }
+
+    /* Vælg tegn fasen */
+
+    #vaelgTegn {
+        font-size: 1.2em;
+    }
+
+    .grid {
+        grid-template-rows: repeat(3, 2.5em);
+        grid-template-columns: repeat(10, 2.5em);
+        line-height: 2.5em;
+    }
+
+    /*Drag and drop*/
+
+    .dragElement {
+        font-size: 2em;
+    }
+
+    /*Din kode ser sådan ud */
+    #dinKode h2 {
+        padding: 15% 0 5% 0;
+    }
+    
+    #kodeKombineret {
+        font-size: 4em;
+    }
+
+    /*Skift kode til konto*/
+    #indtast .kodeDataGreenBg{
+        color: #ffead0; 
+    }
+
+    #kontoKodeSkift {
+        font-size: 2em;
+        margin-top: 22vh;
+    }
+
+    #inputFeltKonto {
+        height: 9vh;
+        font-size: 1.5em;
+    }
+
+    .lilleBeigeBox {
+        height: 46vh;
+    }
+
+    /*Tillykke skærm*/
+    
+    #tillykke h3 {
+        font-size: 1.2em;
+    }
+
+    #lavetAf {
+        font-size: 0.9em;
+        line-height: 1.5;
+    }
+
+    /* Du er blevet hacket fasen  */
+
+    #hacket h2 {
+        font-size: 2.15em;
+    }
+
+    #hacket p {
+        font-size: 1.6em;
+    }
+
+    #hacket img {
+        max-width: 27%;
+        padding: 6vh 0 0 0;
+        margin-bottom: 6vh;
+    }
+
+    .prøvIgen {
+        height: 8.5vh;
+        width: 25%;
+        margin-bottom: 14vh;
+        font-size: 150%;
+    }
+
+    /* Tak for spil fasen  */
+
+    .beigeBoxL h4 {
+        font-size: 1.2em;
+        padding: 15% 0 5% 0;
+    }
+
+    .beigeBoxL h2 {
+        font-size: 1.8em;
+        padding-bottom: 4%;
+    }
+
+    #passwordManager, #toTrin {
+        font-size: 1.1em;
+    }
+
+    .godeRaadBtn {
+        font-size: 1.1em;
+    }
+
+    /* Kopier adgangskode fasen  */
+    #kontiGrid {
+        padding: 10% 0 5% 0;
+    }
+
+    #kontiGrid p {
+        font-size: 1.3em;
+    }
+
+    .kontoKode {
+        font-size: 1.35em;
+        width: 20rem;
+        padding: 5% 3% 5% 3%;
+    }
+
+    #kontiGrid i {
+        font-size: 1.6em;
+    }
+
+}

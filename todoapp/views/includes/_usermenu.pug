@@ -1,0 +1,11 @@
+header 
+    nav 
+        .col-left 
+            a(href="/todos") 
+                img(src="/img/logosmall.svg", alt="Todos")
+            a(href="/users")
+                if(locals.user) 
+                    =locals.user.username
+            a(href="/todos") Todos
+        a(href="/todos/new", class="cta") New todo
+        a(href="/users/logout", class="cta") Log out

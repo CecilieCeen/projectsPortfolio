@@ -1,0 +1,30 @@
+/*index*/
+#mainNav{
+    margin-left: 40vw;
+    margin-right: 40vw;
+    display: grid;
+    grid-template-rows: 10vh 10vh;
+    row-gap: 2vh;
+}
+.index_button{
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    background-color: cadetblue;
+}
+/*login og registrering*/
+#profileimgprint{
+    display: grid;
+    grid-template-columns: repeat(5, 9svw);
+}
+.pics img{
+    border-radius: 50%;
+    width: 8svw;
+}
+.selectedImg{
+    border: 0.2svw solid #df0707;
+}
+/*spil side*/
+
+/*andet*/

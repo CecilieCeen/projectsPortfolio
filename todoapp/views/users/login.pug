@@ -1,0 +1,23 @@
+extends ../layout
+block content
+    div(class="login-wrapper")
+        if(locals.errorMessage)
+            p=errorMessage
+        
+        form(action="/users/login", method="POST", class="form form-user") 
+            img(src="/img/logosmall.svg", alt="Todo app", style="width:100%; padding:0 30px;")
+            h1 Log in
+            div(class="form-group")
+                label(for="username") Username
+                if(locals.user)
+                    input(type="text",name="username", id="username", value=locals.user.username)
+                else 
+                    input(type="text",name="username", id="username")
+            div(class="form-group")
+                label(for="password") Password
+                input(type="password", name="password", id="password")
+            div(class="form-group")
+                button(type=submit, class="btn") Login
+            div(class="form-group")
+                p Not a user yet? 
+                    a(href="/users/register") Register here 

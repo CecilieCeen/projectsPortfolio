@@ -1,0 +1,148 @@
+{
+    "artists": [
+        {
+            "id":1,
+            "name": "Agnes Hartwich",
+            "spotifyId": "5dannHlHirCopWH6vT2DpX",
+            "image":"images/artists/agnes_hartwich_1x1.webp",
+            "veneue":"Godset",
+            "start":"16:30"
+        },
+        {
+            "id":2,
+            "name":"Astrid Engberg",
+            "text":"Sangerinden og produceren Astrid Engberg er indbegrebet af moderne jazz anno 2023. For hun bygger de smukkeste broer mellem alverdens musikgenrer. ...",
+            "spotifyId":"1aCZzByicOHcS6WpNPwqXV",
+            "image":"images/artists/astrid_engberg_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":3,
+            "name": "Chopper",
+            "spotifyId": "5Gh6G0svQss9izo01sYHCs",
+            "image":"images/artists/chopper_1x1.webp",
+            "veneue":"",
+            "start":"16:30"
+        },
+        {
+            "id":4,
+            "name":"Cumbian Colors",
+            "spotifyId":"4MLdFWfIzk10DTDnTti05e",
+            "image":"images/artists/cumbian_colors_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":5,
+            "name":"Danser Med Piger",
+            "spotifyId":"0OhwwB6b7ugDTS41UT4YJS",
+            "image":"images/artists/danser_med_piger_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":6,
+            "name":"Djämes Braun",
+            "spotifyId":"3kI2qtr3zCuB4YbDl5yvkh",
+            "image":"images/artists/djames_braun_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":17,
+            "name": "Dillistone",
+            "spotifyId":"7ypPN35cJ9wfF2Zs7aYS33",
+            "image":"images/artists/dillistone_1x1.webp",
+            "veneue":"Godset",
+            "start": "20:00"
+        },
+        {
+            "id":7,
+            "name":"Elektrisk Ål",
+            "spotifyId":"73UbTOKS7e146PBWxFQrff",
+            "image":"images/artists/elektrisk_aal_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":8,
+            "name":"Evil House Party",
+            "spotifyId":"4dcXQW2aINb1lAMHKQa2hB",
+            "image":"images/artists/evil_house_party_1x1.webp",
+            "veneue":"Godset",
+            "start":"19:30"
+        },
+        {
+            "id":9,
+            "name":"Ipek Yulo",
+            "spotifyId":"5TIy4svVCpewV2guElzwB7",
+            "image":"images/artists/ipek_yulo_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":10,
+            "name":"Kamma",
+            "spotifyId":"5pUS7wijCmJYhSLasDlLLj",
+            "image":"images/artists/kamma_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":18,
+            "name":"Krydsfelt 2.0",
+            "image":"images/artists/krydsfelt_2.0.webp",
+            "veneue":"Dance Hall",
+            "start":"20:00"
+        },
+        {
+            "id":11,
+            "name":"SULKA",
+            "spotifyId":"467BSFPrqZP3HT6dXzsBqv",
+            "image":"images/artists/sulka_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":12,
+            "name":"SUNI",
+            "spotifyId":"2KHa9hXUmX3jfm5YWm7LwC",
+            "image":"images/artists/suni_1x1_.webp",
+            "veneue":"Jazzhouse",
+            "start":"19:30"
+        },
+        {
+            "id":13,
+            "name":"Szim",
+            "spotifyId":"41x4mjrHp3B0fLf7rFktcT",
+            "image":"images/artists/szim_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":14,
+            "name":"Tettix Hexer",
+            "spotifyId":"3CPIQ7xQ4flFItDS8f7wqa",
+            "image":"images/artists/tettix_hexer_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":15,
+            "name":"The Physics House Band",
+            "spotifyId":"30EilmonVXftR1pWoALezP",
+            "image":"images/artists/the_physics_house_band_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        },
+        {
+            "id":16,
+            "name":"Ude Af Kontrol",
+            "spotifyId":"2ZbyyCS8KLKsuoNlxc76Ev",
+            "image":"images/artists/ude_af_kontrol_1x1.webp",
+            "veneue":"Jazzhouse",
+            "start":"16:30"
+        }
+    ]
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registring</title>
+    <link rel="stylesheet" href="css/styling.css">
+</head>
+<body>
+    <div>
+        <p class="error"></p>
+    </div>
+    <form class="container" method="post" name="registerform" action="http://localhost:3000/register">
+        <label for="username">username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">password:</label><br>
+        <input type="text" id="password" name="password"><br>
+        <label for="email">email:</label><br>
+        <input type="text" id="email" name="email"><br>
+        <label for="userpic">select profile picture:</label><br>
+        <section id="profileimgprint">
+
+        </section><br>
+        <input type="text" id="userpic" name="userpic"><br><br>
+        <input type="submit" value="Submit" id="registerSubmit">
+    </form>
+    <a href="login.html">har allered en bruger</a>
+
+
+<script src="js/js.js"></script>
+</body>
+</html>

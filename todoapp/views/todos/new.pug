@@ -1,0 +1,23 @@
+extends ../layout
+block content
+    div.wrapper
+        include ../includes/_usermenu
+        if(locals.errorMessage)
+            p=errorMessage
+        form(action="/todos/new", method="POST", class="form form-todo")
+            h1 Create new todo
+            label(for="title") Title
+            input(type="text", required, id="title", name="title")
+            label(for="description") Description
+            textarea(name="description", cols="30", rows="10", id="description")
+            label(for="startDate") Start date:
+            small *leave blank to start now
+            input(type="datetime-local", name="startDate", id="startDate")
+            label(for="deadline") Deadline: 
+            input(type="datetime-local", required, name="deadline", id="deadline")
+            label(for="done") Done
+            select(name="done", id="done") 
+                option(value="0" selected) Not done 
+                option(value="1") Done 
+            button(type="submit") Create
+            a(href="/todos", style="text-align:center").cta Cancel

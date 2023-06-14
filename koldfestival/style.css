@@ -1,0 +1,1590 @@
+/* Fonts */
+@font-face {
+    font-family: 'HelveticaNeue';
+    src: url('fonts/HelveticaNeueLTStd-Roman.otf') format('opentype');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'HelveticaNeueBold';
+    src:  url('fonts/HelveticaNeueLTStd-Blk.otf') format('opentype');
+    font-weight: bold;
+}
+
+:root {
+    /* Basic color theme: */
+    --color-1:#2EFEB3;
+    --color-2:#98E8FF;
+    --color-3:#FD0079;
+    /* Dark colors: */
+    --main-bg-color: #233036;
+    --darker-bg-color:#161D21;
+    --footerBG: #1E1318;
+    --talksbox: #D9D9D9;
+    --light-color:#E3E3E3;
+    --section-padding-top: 115px;
+    --section-padding-bottom: 115px;
+    --section-padding-left: 200px;
+    --section-padding-right: 200px;
+}
+
+
+/* basic Reset */
+*{box-sizing: border-box;}
+
+
+/* basic reset of html and body */
+html, body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:var(--main-bg-color);
+    color:var(--light-color);
+}
+a{
+    color: var(--light-color);
+}
+
+/* Top header */
+#topHeader{
+    top: 0;
+    min-height: 80px;
+    width: 100%;
+    position: fixed;
+    background:var(--darker-bg-color);
+    display: flex;
+    align-items: center;
+    padding:0 50px 0 50px;
+    z-index: 3;
+}
+#mainNav{
+    display:flex;
+    list-style: none;
+    padding:0;
+}
+#mainNav > li > a{
+    text-decoration: none;
+    padding:8px 16px;
+    text-transform: uppercase;
+    font-family: 'HelveticaNeue', sans-serif;
+    margin-right:10px;
+}
+#mainNav > li > a:hover,
+#mainNav > li.active > a{
+    color:var(--color-1);
+    border-bottom:var(--color-1) solid 2px;
+}
+#topHeader > .btn{
+    margin-left:auto;
+}
+#headerLogo{
+    max-height:33px;
+    width:auto;
+    margin-right:10px;
+}
+
+#showMenuBtn{
+    background:var(--darker-bg-color);
+    border:var(--color-1) 1px solid;
+    padding:10px 16px;
+    display:none;
+    border-radius:5px;
+    order:3;
+}
+
+/* End of navigation */
+/* Knapper - links */
+
+
+.btn{
+    display:inline-block;
+    text-decoration: none;
+    background:var(--color-1);
+    color:var(--main-bg-color);
+    padding:15px 20px;
+    border:solid 2px var(--main-bg-color);
+    border-radius:5px;
+    transition: 0.3s;
+    text-align: center;
+}
+.btn:hover{
+    background:var(--main-bg-color);
+    color:var(--color-1);
+    border:solid 2px var(--color-1);
+}
+
+/* End og knapper - links */
+
+
+
+/* headers */
+header{
+    text-align: center;
+}
+#frontpageHeader{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding:80px var(--section-padding-right) 0 var(--section-padding-left);
+    min-height:90vh;
+    background:black;
+    background-image: url("projects/images/header.webp");
+    background-repeat: no-repeat;
+    background-position-y: top;
+    background-size: cover;
+}
+/* End Of headers */
+
+
+
+/* Sections */
+body > section{
+    padding-top:var(--section-padding-top);
+    padding-bottom:var(--section-padding-top);
+    padding-right:var(--section-padding-right);
+    padding-left:var(--section-padding-left)
+}
+
+
+/* Sections | Artists */
+#artist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+#small_Artist_List > div > a{
+    display:inline-block;
+}
+#small_Artist_List{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 2%;
+    place-items: center;
+    z-index: 2;
+}
+#small_Artist_List img{
+    object-fit: contain;
+    width:100%;
+    height:auto;
+}
+#small_Artist_List .row2{
+    display:flex;
+    flex-direction: column;
+    row-gap: 3vh;
+}
+
+#small_Artist_List a:hover {
+    transform: scale(1.15);
+}
+
+
+
+/* Sections |  talks */
+#talksFrontpage h4, #talksFrontpage p{
+    color: black;
+    text-align: center;
+}
+
+#talks h4 {
+    font-size: 14px;
+}
+
+#talks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#upperRowTalks div, #middleRowTalks div, #lowerRowTalks div{
+    background-color: #D9D9D9;
+    width: 600px;
+    min-height: 150px;
+    padding: 20px;
+
+    box-shadow: inset 5px -5px 0px 0px #FD0079, inset -5px 5px 0px 0px #31C5F4;
+}
+
+#upperRowTalks, #middleRowTalks, #lowerRowTalks {
+    display: flex;
+    justify-content: center;
+}
+
+#talkOne {
+    margin-right: 10px;
+}
+
+#talkTwo {
+    margin-left: 10px;
+}
+
+#middleRowTalks {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+/* Sections |  Billetter */
+#billeter {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    background:var(--darker-bg-color);
+    row-gap: 20px;
+}
+#days{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10%;
+    justify-content: center;
+}
+.pricecol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pricecol ul{
+    padding-left: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}
+
+.pricecol li{
+    text-align: center;
+}
+
+
+/*  Sections | Counter */
+.counterGrid{
+    margin:0 auto;
+    display:grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.counterGrid > div{
+    border-right: var(--light-color) solid 2px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.counterGrid > div:last-child{
+    border:none;
+}
+.counterGrid > div > h3,
+.counterGrid > div > p{
+    margin:0;
+}
+/* End of Sections */
+
+
+/* Typography */
+body{
+    font-size:16px;
+    font-family: 'HelveticaNeue';
+}
+
+
+h1{
+    font-size:39.1px;
+    font-family: 'HelveticaNeueBold';
+    font-weight:bold;
+    text-transform: uppercase;
+}
+h2{
+    font-family:"HelveticaNeueBold", sans-serif;
+    font-weight:bold;
+    font-size:31.25px;
+    text-transform: uppercase;
+}
+h3{
+    font-family:"HelveticaNeueBold", sans-serif;
+    font-weight:bold;
+    font-size:25px;
+    text-transform: uppercase;
+}
+
+
+h1 span.slim{
+    font-family: 'HelveticaNeue', sans-serif;
+    font-weight: normal;
+}
+
+
+.centerText{
+    text-align: center;
+}
+
+
+article{
+    text-align: center;
+}
+
+
+.boldText{
+    font-family:'HelveticaNeueBold', sans-serif;
+    font-weight:bold;
+}
+
+
+a{
+    font-family:'HelveticaNeue';
+}
+.btn{
+    font-family: 'HelveticaNeueBold', sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+/* FOOTER Typography */
+footer a{
+    text-decoration: none;
+}
+footer a:hover{
+    color:var(--color-1);
+}
+footer h3{
+    color: var(--color-1);
+    margin:0;
+}
+footer h6{
+    text-align: center;
+}
+#footericonflex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 4vh;
+}
+footer .FooterSocialIcon{
+    width: 25px;
+}
+/* FOOTER */
+footer{
+    padding:50px 115px;
+    background:var(--footerBG) ;
+}
+footer ul{
+    margin:0 0 25px 0;
+    padding:0 0 0 0px;
+    display:flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+footer ul > li{
+    margin-top:0.5em;
+}
+#footerGrid{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+#footerGrid > div:last-child{
+    text-align: right;
+}
+footer h6{
+    margin:0;
+}
+/* END of Footer */
+
+/* COLORED SHAPES FRONTPAGE*/
+#coloredShapeFrontpage1 {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #2EFEB3;
+    position: absolute;
+    left: 0;
+    top: 700px;
+    z-index: 1;
+}
+
+
+
+#coloredShapeFrontpage2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1000px;
+}
+
+
+
+#coloredShapeFrontpage3a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 1100px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeFrontpage3b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1100px;
+}
+
+
+
+#coloredShapeFrontpage4a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 1200px;
+    transform: scaleX(-1);
+}
+
+#coloredShapeFrontpage4b {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 1200px;
+}
+
+#coloredShapeFrontpage4c {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 1200px;
+}
+
+
+#coloredShapeFrontpage5a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #2EFEB3 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 200px;
+    top: 1800px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeFrontpage5b {
+    width: 100px;
+    height: 100px;
+    background-color: #2EFEB3;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 1800px;
+}
+
+#coloredShapeFrontpage5c {
+    width: 100px;
+    height: 100px;
+    background-color: #2EFEB3;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1800px;
+}
+
+#coloredShapeFrontpage6a {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 2000px;
+}
+
+#coloredShapeFrontpage6b {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 2000px;
+    transform: rotate(180deg);
+}
+
+#coloredShapeFrontpage7a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 2500px;
+}
+
+#coloredShapeFrontpage7b {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 2500px;
+}
+
+#coloredShapeFrontpage8 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #2EFEB3 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 2600px;
+    transform: rotate(90deg);
+}
+
+#coloredShapeFrontpage9a {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 2700px;
+}
+
+#coloredShapeFrontpage9b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 2700px;
+}
+
+#coloredShapeFrontpage9c {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 2700px;
+    transform: rotate(90deg);
+}
+
+
+
+/* COLORED SHAPES ARTISTS */
+#coloredShapeArtists1 {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #2EFEB3;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 1;
+}
+
+
+
+#coloredShapeArtists2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 350px;
+}
+
+
+
+#coloredShapeArtists3a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 450px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeArtists3b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 450px;
+}
+
+#coloredShapeArtists4a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 800px;
+    transform: scaleX(-1);
+}
+
+#coloredShapeArtists4b {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 800px;
+}
+
+
+#coloredShapeArtists5a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #2EFEB3 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 1000px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeArtists5b {
+    width: 100px;
+    height: 100px;
+    background-color: #2EFEB3;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1000px;
+}
+
+#coloredShapeArtists8 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #2EFEB3 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 1450px;
+    transform: rotate(90deg);
+}
+
+#coloredShapeArtists9a {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 1550px;
+}
+
+#coloredShapeArtists9b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 1550px;
+}
+
+#coloredShapeArtists9c {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 1550px;
+    transform: rotate(90deg);
+}
+
+
+
+/* COLORED SHAPES PROGRAM*/
+#coloredShapeProgram1 {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #2EFEB3;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 1;
+}
+
+#coloredShapeProgram2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 480px;
+}
+
+#coloredShapeProgram3a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 580px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeProgram3b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 580px;
+}
+
+#coloredShapeProgram4a {
+    display: none;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 980px;
+    transform: scaleX(-1);
+}
+
+#coloredShapeProgram4b {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 980px;
+}
+
+#coloredShapeProgram4c {
+    display: none;
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 980px;
+}
+
+
+/* COLORED SHAPES BAEREDYGTIGHED */
+#coloredShapeBaeredygtighed1 {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #2EFEB3;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 1;
+}
+
+
+
+#coloredShapeBaeredygtighed2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 300px;
+}
+
+
+
+#coloredShapeBaeredygtighed3a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 400px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeBaeredygtighed3b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 400px;
+}
+
+#coloredShapeBaeredygtighed4a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 600px;
+    transform: scaleX(-1);
+}
+
+#coloredShapeBaeredygtighed4b {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 600px;
+}
+
+#coloredShapeBaeredygtighed4c {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 600px;
+}
+
+
+#coloredShapeBaeredygtighed5a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #2EFEB3 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 1000px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeBaeredygtighed5b {
+    width: 100px;
+    height: 100px;
+    background-color: #2EFEB3;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1000px;
+}
+
+#coloredShapeBaeredygtighed6b {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 1300px;
+    transform: rotate(180deg);
+}
+
+#coloredShapeBaeredygtighed7a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 1700px;
+}
+
+#coloredShapeBaeredygtighed7b {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 1700px;
+}
+
+
+/* COLORED SHAPES OM KOLD */
+#coloredShapeOmKOLD1 {
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #2EFEB3;
+    position: absolute;
+    left: 0;
+    top: 200px;
+    z-index: 1;
+}
+
+
+
+#coloredShapeOmKOLD2 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 300px;
+}
+
+
+
+#coloredShapeOmKOLD3a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #FD0079 transparent;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 400px;
+    transform: scaleY(-1);
+}
+
+#coloredShapeOmKOLD3b {
+    width: 100px;
+    height: 100px;
+    background-color: #FD0079;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 400px;
+}
+
+
+
+#coloredShapeOmKOLD4a {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent #31C5F4 transparent;
+    position: absolute;
+    z-index: 1;
+    left: 200px;
+    top: 1050px;
+    transform: scaleX(-1);
+}
+
+#coloredShapeOmKOLD4b {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 100px;
+    top: 1050px;
+}
+
+#coloredShapeOmKOLD4c {
+    width: 100px;
+    height: 100px;
+    background-color: #31C5F4;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 1050px;
+}
+
+
+
+
+
+
+
+
+/* MOBILE LAYOUT */
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --section-padding-top: 50px;
+        --section-padding-bottom: 50px;
+        --section-padding-left: 20px;
+        --section-padding-right: 20px;
+    }
+    html, body{
+        max-width: 600px;
+        overflow-x:hidden;
+    }
+
+    /* Main menu */
+    #topHeader{
+        display:grid;
+        grid-template-columns:auto auto auto;
+        grid-template-rows: auto;
+        padding:10px;
+        align-items: start;
+        min-height:auto;
+    }
+    #mainNav{
+        display:none;
+    }
+    #showMenuBtn{
+        display:flex;
+        justify-self: center;
+    }
+    #topHeader .btn{
+        margin-left:0;
+        padding:8px 12px;
+    }
+    #topHeader.showMenu{
+        grid-template-rows:auto auto;
+    }
+    #topHeader.showMenu #mainNav{
+        order:3;
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        
+        display:flex;
+        flex-direction: column;
+    }
+    #topHeader.showMenu #mainNav li{
+        display:flex;
+        flex-direction: column;
+    }
+    
+
+    /* ARTISTS FRONTPAGE */
+    #small_Artist_List {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #small_Artist_List .row2 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #small_Artist_List img {
+        height: 180px;
+    }
+
+    #small_Artist_List .row2 a:first-child {
+        margin-right: 5px;
+    }
+
+    #small_Artist_List .row2 a:last-child {
+        margin-left: 5px;
+    }
+
+    /* TALKS */
+    #small_Artist_List {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #small_Artist_List div a img {
+        height: 180px;
+    }
+
+    #small_Artist_List .row2 {
+        display: flex;
+        flex-direction: row;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #small_Artist_List .row2 a:first-child {
+        margin-right: 10px;
+    }
+
+    #small_Artist_List .row2 a:last-child {
+        margin-left: 10px;
+    }
+
+
+    #middleRowTalks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #middleRowTalks #talkOne {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #middleRowTalks #talkTwo {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    #upperRowTalks div, #middleRowTalks div, #lowerRowTalks div{
+        width: 350px;
+        height: 200px;
+    }
+
+
+
+    /* SECTIONS */
+    .talksGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr;
+    }
+    #days{
+        grid-template-columns: 1fr;
+        row-gap:25px;
+    }
+    #footerGrid{
+        grid-template-columns: 1fr;
+        row-gap:30px;
+        text-align: center;
+    }
+    footer{
+        padding:30px 20px 30px 20px;
+    }
+    #footerGrid ul a,
+    #footerGrid address a{
+        padding:10px;
+    }
+    #footerGrid > div:last-child{
+        text-align: center;
+    }
+
+
+    /* COLORED SHAPES FRONTPAGE*/
+    #coloredShapeFrontpage1 {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #2EFEB3;
+        left: 0;
+        top: 825px;
+    }
+
+    #coloredShapeFrontpage2 {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 0;
+        top: 1125px;
+    }
+
+    #coloredShapeFrontpage3a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        right: 50px;
+        top: 1175px;
+    }
+
+    #coloredShapeFrontpage3b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 1175px;
+    }
+
+    #coloredShapeFrontpage4a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        left: 50px;
+        top: 1350px;
+    }
+
+    #coloredShapeFrontpage4b {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 1350px;
+    }
+
+    #coloredShapeFrontpage4c {
+        display: none;
+    }
+
+    #coloredShapeFrontpage5a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #2EFEB3 transparent;
+        right: 0;
+        top: 1800px;
+    }
+
+    #coloredShapeFrontpage5b {
+        display: none;
+    }
+
+    #coloredShapeFrontpage5c {
+        display: none;
+    }
+
+    #coloredShapeFrontpage6a {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 2200px;
+    }
+
+    #coloredShapeFrontpage6b {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        left: 50px;
+        top: 2200px;
+    }
+
+    #coloredShapeFrontpage7a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 50px;
+        top: 2450px;
+    }
+
+    #coloredShapeFrontpage7b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 2450px;
+    }
+
+    #coloredShapeFrontpage8 {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #2EFEB3 transparent;
+        left: 0;
+        top: 3400px;
+    }
+
+    #coloredShapeFrontpage9a {
+        display: none;
+    }
+
+    #coloredShapeFrontpage9b {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 3450px;
+    }
+
+    #coloredShapeFrontpage9c {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        left: 50px;
+        top: 3450px;
+        transform: rotate(180deg);
+    }
+
+
+    /* COLORED SHAPES ARTISTER*/
+    #coloredShapeArtists1 {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #2EFEB3;
+        left: 0;
+        top: 125px;
+    }
+
+    #coloredShapeArtists2 {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 0;
+        top: 225px;
+    }
+
+    #coloredShapeArtists3a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        right: 50px;
+        top: 275px;
+    }
+
+    #coloredShapeArtists3b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 275px;
+    }
+
+    #coloredShapeArtists4a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        left: 50px;
+        top: 500px;
+    }
+
+    #coloredShapeArtists4b {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 500px;
+    }
+
+    #coloredShapeArtists5a {
+        display: none;
+    }
+
+    #coloredShapeArtists5b {
+        display: none;
+    }
+
+    #coloredShapeArtists8 {
+        display: none;
+    }
+
+    #coloredShapeArtists9a {
+        display: none;
+    }
+
+    #coloredShapeArtists9b {
+        display: none;
+    }
+
+    #coloredShapeArtists9c {
+        display: none;
+    }
+
+
+    /* COLORED SHAPES PROGRAM*/
+    #coloredShapeProgram1 {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #2EFEB3;
+        left: 0;
+        top: 225px;
+    }
+
+    #coloredShapeProgram2 {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 0;
+        top: 1425px;
+    }
+
+    #coloredShapeProgram3a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        right: 50px;
+        top: 1475px;
+    }
+
+    #coloredShapeProgram3b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 1475px;
+    }
+
+    #coloredShapeProgram4a {
+        display: block;
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        left: 50px;
+        top: 2650px;
+    }
+
+    #coloredShapeProgram4b {
+        display: block;
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 2650px;
+    }
+
+    #coloredShapeProgram4c {
+        display: none;
+    }
+
+
+    /* COLORED SHAPES BAEREDYGTIGHED*/
+    #coloredShapeBaeredygtighed1 {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #2EFEB3;
+        left: 0;
+        top: 100px;
+    }
+
+    #coloredShapeBaeredygtighed2 {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 0;
+        top: 775px;
+    }
+
+    #coloredShapeBaeredygtighed3a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        right: 50px;
+        top: 825px;
+    }
+
+    #coloredShapeBaeredygtighed3b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 825px;
+    }
+
+    #coloredShapeBaeredygtighed4a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        left: 50px;
+        top: 875px;
+    }
+
+    #coloredShapeBaeredygtighed4b {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 875px;
+    }
+
+    #coloredShapeBaeredygtighed4c {
+        display: none;
+    }
+
+    #coloredShapeBaeredygtighed5a {
+        display: none;
+    }
+
+    #coloredShapeBaeredygtighed5b {
+        display: none;
+    }
+
+    #coloredShapeBaeredygtighed6b {
+        display: none;
+    }
+
+    #coloredShapeBaeredygtighed7a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 50px;
+        top: 2980px;
+    }
+
+    #coloredShapeBaeredygtighed7b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 2980px;
+    }
+
+
+    /* COLORED SHAPES OM KOLD*/
+    #coloredShapeOmKOLD1 {
+        border-top: 30px solid transparent;
+        border-bottom: 30px solid transparent;
+        border-left: 30px solid #2EFEB3;
+        left: 0;
+        top: 150px;
+    }
+
+    #coloredShapeOmKOLD2 {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        right: 0;
+        top: 325px;
+    }
+
+    #coloredShapeOmKOLD3a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #FD0079 transparent;
+        right: 50px;
+        top: 375px;
+    }
+
+    #coloredShapeOmKOLD3b {
+        width: 50px;
+        height: 50px;
+        right: 0;
+        top: 375px;
+    }
+
+    #coloredShapeOmKOLD4a {
+        border-width: 0 0 50px 50px;
+        border-color: transparent transparent #31C5F4 transparent;
+        left: 50px;
+        top: 1090px;
+    }
+
+    #coloredShapeOmKOLD4b {
+        width: 50px;
+        height: 50px;
+        left: 0;
+        top: 1090px;
+    }
+
+    #coloredShapeOmKOLD4c {
+        display: none;
+    }
+}
+
+/* END OF MOBILE LAYOUT*/

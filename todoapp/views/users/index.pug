@@ -1,0 +1,11 @@
+extends ../layout
+block content
+    div.wrapper
+        include ../includes/_usermenu
+        if(locals.errorMessage)
+            p=errorMessage
+        h1 User info
+        if(locals.user)
+            p username: #{locals.user.username}
+        else
+            p No user info provided

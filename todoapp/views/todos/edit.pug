@@ -1,0 +1,30 @@
+extends ../layout
+block content
+    div.wrapper
+        include ../includes/_usermenu
+        if(locals.errorMessage)
+            p=errorMessage
+        form(action="/todos/"+locals.todo.id+"?_method=PUT", method="POST", class="form form-todo")
+            h1 Edit todo
+            label(for="title") Title
+            input(type="text", required, id="title", name="title", value=locals.todo.title)
+            label(for="description") Description
+            textarea(name="description", cols="30", rows="10", id="description")
+                =locals.todo.description
+            label(for="startDate") Start date:
+            small *leave blank to start now
+            -const sd = new Date(locals.todo.startDate);
+            input(type="datetime-local", name="startDate", id="startDate")
+            label(for="deadline") Deadline: 
+            -const dt = new Date(locals.todo.deadline);
+            input(type="datetime-local", required, name="deadline", id="deadline")
+            label(for="done") Done
+            select(name="done", id="done")
+                if(locals.todo.done)
+                    option(value="0") Not done 
+                    option(value="1" selected) Done 
+                else 
+                    option(value="0" selected) Not done 
+                    option(value="1" selected) Done 
+            button(type="submit") Update
+            a(href="/todos", style="text-align:center").cta Cancel

@@ -1,0 +1,21 @@
+extends ../layout
+block content
+    div(class="login-wrapper")
+            form(action="/users/register", method="POST", class="form form-user")
+                if(locals.errorMessage)
+                    p=errorMessage
+                h1 Register
+                div(class="form-group")
+                    label(for="username") Create username
+                    if(locals.user)
+                        input(type="text",name="username", id="username", value=locals.user.username)
+                    else 
+                        input(type="text",name="username", id="username")
+                div(class="form-group")
+                    label(for="password") Create password
+                    input(type="password", name="password", id="password")
+                div(class="form-group")
+                    button(type=submit, class="btn") Register
+                div(class="form-group")
+                    p Already a user? 
+                        a(href="/users/login") Log in here 

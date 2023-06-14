@@ -1,0 +1,61 @@
+section#program{
+    padding:50px 050px;
+}
+section#program h2{
+    margin-top:50px;
+}
+
+#program, .venues, .venue {
+    z-index: 2;
+}
+
+.venues{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 35px;
+    border: 3px solid white;
+    position: relative;
+    justify-items: start;
+}
+.venue{
+    padding:20px;
+}
+.venue h3{
+    margin:0;
+}
+.venue .placeProgram{
+    display:flex;
+    flex-direction: column;
+}
+.venue .placeProgram div{
+    display:flex;
+    margin:5px 0;
+}
+.venue .placeProgram div p{
+    margin:0;
+}
+.venue .placeProgram div p:first-child{
+    margin-right:5px;
+    min-width:65px;
+}
+.venue address{
+    margin-bottom:15px;
+}
+.venue .artist{
+    font-family: 'HelveticaNeueBold';
+    text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 750px) {
+    .venues{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .venues{
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+}

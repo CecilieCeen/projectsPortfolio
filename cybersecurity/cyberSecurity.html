@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackerangrebet</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicon.png">
+    <script src="https://kit.fontawesome.com/5de230ab31.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cyberSecurity.css">
+    <script src="cyberSecurity.js" defer></script>
+</head>
+<body>
+    <header>
+        <i id="infoOpen" class="fas fa-info-circle hidden"></i>
+        <div id="popupInfo" class="infoContent hidden">
+            <i class="fas fa-times infoClose"></i>
+            <h4>Om Projektet</h4>
+            <p>
+                Dette programs formål er at træne folk i finanssektoren til at lave stærkere kodeord, 
+                og til at hjælpe dem med at huske disse kodeord. Programmet er lavet i forbindelse med 
+                et research projekt om cyber security på IBA.
+            </p>
+        </div>
+    </header>
+    <!-- Welcome to div hell :) -->
+    <main>
+        <div id="velkommen">
+            <div class="beigeBoxM">
+                <img src="img/Guide-staaende.png" alt="Luca">
+                <h1>Hackerangrebet</h1>
+                <p>Et interaktivt træningsprogram, der hjælper<br>
+                    dig med at lave stærke kodeord, du kan huske.</p>
+                <div class="roundBtn nextPhase">START</div>
+            </div>
+        </div>
+        <div id="intro">
+            <img src="img/Sign-in-warning.png" alt="Sign in warning" class="warning">
+            <img src="img/Udråbstegn.png" alt="Udråbstegn" class="udråbstegnLeft">
+            <h2>Åh nej, du er ved at blive hacket</h2>
+            <img src="img/Udråbstegn.png" alt="Udråbstegn" class="udråbstegnRight">
+            <p>Lad os skynde os at lave et nyt kodeord.<br>
+                Et så stærkt, at ingen hacker vil kunne bryde det!</p>
+            <div class="komIgang nextPhase">Forstået, lad os komme igang</div>
+        </div>
+        <div id="luca">
+            <div class="beigeBoxS">
+                <img src="img/Guide-hej.png" alt="Luca siger hej">
+                <p>Hej, jeg hedder <strong id="lucaBold">Luca</strong>.<br>
+                    Jeg er din guide, der vil hjælpe dig<br>
+                    med at lave dit nye kodeord.</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="adgangskode">
+            <div class="beigeBoxS">
+                <img src="img/Guide-siddende.png" class="lucaSidder" alt="Luca forklarer">
+                <h3>En stærk adgangskode skal:</h3>
+                <ul>
+                    <li>• Have mindst 16 tegn</li>
+                    <li>• Bestå af små og store bogstaver</li>
+                    <li>• Indeholde både tal og symboler</li>
+                    <li>• Ikke indeholde personlig information</li>
+                </ul>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="småBogstaver">
+            <div class="beigeBoxS">
+                <img src="img/Guide-siddende.png" class="lucaSidder" alt="Luca forklarer">
+                <h2>Små bogstaver</h2>
+                <p>Først skal vi finde små bogstaver.<br>
+                    De er fundamentet for ethvert godt kodeord.</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="kategori">
+            <div id="øversteDel">
+                <div id="skiftLeft">
+                    <p>skift</p>
+                    <button><i class="fas fa-chevron-left"></i></button>
+                </div>
+
+                <p id="kategoriValg"></p>
+
+                <div id="skiftRight">
+                    <p>skift</p>
+                    <button><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <div id="midterDel">
+            <div>
+                <input id="inputFelt" placeholder="Skriv her" type="text">
+            </div>
+            <div class="arrowBtnInput" id="kategoriEnter">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            </div>
+            <div class="hackerBaren">
+                <div class="hackerensFremskridt">
+                    <p>Hackerens fremskridt</p>
+                </div>
+                <div class="loadingBar">
+                <div class="bar">
+                    <div id="barKategori" class="blackLoadingBar"></div>
+                </div>
+                <div class="procent">27%</div>
+                </div>
+            </div>
+            <div class="lilleBeigeBox">
+                <p id="kategoriDialog">Vælg den kategori der betyder mest for<br>
+                    dig ved at gå frem og tilbage på pilene.<br>
+                    Vi skriver dit input baglæns, og det vil<br>
+                    blive en del af din endelige<br>
+                    adgangskode.</p>
+            </div>
+            <img class="vector" src="img/Guide-siddende-crop.png" alt="vector">
+        </div>
+        <div id="flip">
+            <h2>Sådan ser dit ord ud baglæns:</h2>
+            <p id="wordFlip"></p>
+            <p id="flipTip">Tip: Det er vigtigt, at man ikke bruger nogle genkendelige ord, for så kan hackeren lave <br> et  ordbogsangreb. Derfor vender vi dit ord om, for at sikre dig så godt som muligt.</p>
+            <img class="ladyMirror" src="img/Guide-siddende-crop.png" alt="dame ved computer">
+            <div class="arrowBtn" id="flipEnter">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div id="forklarTal">
+            <div class="beigeBoxS">
+                <img src="img/Guide-siddende.png" class="lucaSidder" alt="Luca forklarer">
+                <h2>Tal</h2>
+                <p>Det kræver kun nogle få tal, at øge dit<br>
+                    kodeords styrke betydeligt.<br>
+                    Nu skal du vælge det første bogstav i dit<br>
+                    fornavn og efternavn, så får du de tal, som<br>
+                    svarer til bogstavernes placering i alfabetet.<br>
+                    Derefter ganger vi tallet for at gøre<br>
+                    kodeordet mere unikt.</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="vælgTal">
+            <div class="kodeData">
+                <p class="antalTegn">0 tegn</p>
+                <p class="dinAdgangskode">Din adgangskode:</p>
+                <p class="kodeDele">input</p>
+            </div>
+            <div class="talGrid">
+                <p>Indtast forbogstavet i dit fornavn:</p>
+                <p>Det korresponderende tal:</p>
+                <input type="text" id="forNavn" placeholder="Fornavn" maxlength="1">
+                <div id="fornavnTal"></div>
+                <p>Indtast forbogstavet i dit efternavn:</p>
+                <p>Det korresponderende tal:</p>
+                <input type="text" id="efterNavn" placeholder="Efternavn" maxlength="1">
+                <output id="efternavnTal"></output>
+            </div>
+            <div class="hackerBarenBeige">
+                <div class="hackerensFremskridtBeige">
+                    <p>Hackerens fremskridt</p>
+                </div>
+            <div class="loadingBar">
+                <div class="bar">
+                    <div id="barTal" class="blackLoadingBar"></div>
+                </div>
+                <div class="procent">50%</div>
+            </div>
+        </div>
+            <div class="arrowBtn nextPhase" id="vaelgTalEnter">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div id="talGanges">
+            <div class="kodeData">
+                <p class="antalTegn">0 tegn</p>
+                <p class="dinAdgangskode">Din adgangskode:</p>
+                <p class="kodeDele">input</p>
+            </div>
+            <h2>Hvad skal tallene ganges med?</h2>
+            <h3>Skriv et tal mellem 2-9:</h3>
+            <div id="ligning">
+                <div id="ligningLodret">
+                    <div id="fornavnTalKasse"></div>
+                    <div id="efternavnTalKasse"></div>
+                </div>
+                <div id="ligningVandret">
+                    <p id="gange">X</p>
+                    <input type="text" id="talDerGanges" />
+                    <p id="lig">=</p>
+                </div>
+            </div>
+            <div class="hackerBarenBeige">
+                <div class="hackerensFremskridtBeige">
+                    <p>Hackerens fremskridt</p>
+                </div>
+            <div class="loadingBar">
+                <div class="bar">
+                    <div id="barTalGanges" class="blackLoadingBar"></div>
+                </div>
+                <div class="procent">54%</div>
+            </div>
+        </div>
+            <div class="arrowBtn nextPhase" id="gangTalEnter">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div id="talResultat">
+            <h2>Dine endelige tal:</h2>
+            <div class="gridBtn">
+            <output id="finalFornavn"></output>
+            <output id="finalEfternavn"></output>
+           </div>            
+            <p>Tip: Det er vigtigt, at dit kodeord ikke indeholder personlige oplysninger. Det er derfor en god idé,<br>
+                at skabe unikke tal til dit kodeord. Du kan fx bruge de fire regnearter: plus, minus, gange og dividere,<br>
+                til at skabe unikke tal fra nogle der har betydning for dig.</p>
+            <div class="arrowBtn nextPhase" id="talResultatBtn">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <img class="ladyMirror" src="img/Guide-siddende-crop.png" alt="dame ved computer">
+        </div>
+        <div id="forklarTegn">
+            <div class="beigeBoxS">
+                <img src="img/Guide-siddende.png" class="lucaSidder" alt="Luca forklarer">
+                <h2>Specialtegn</h2>
+                <p>Et enkelt specialtegn kan gøre en stor forskel.<br>
+                    Vælg et tegn du godt kan lide.</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="vælgTegn">
+            <div class="kodeData">
+                <p class="antalTegn">0 tegn</p>
+                <p class="dinAdgangskode">Din adgangskode:</p>
+                <p class="kodeDele">input</p>
+            </div>
+            <div class="grid">
+                <div class="specialTegn punktum">.</div>
+                <div class="specialTegn kolon">:</div>
+                <div class="specialTegn semikolon">;</div>
+                <div class="specialTegn slash">/</div>
+                <div class="specialTegn backslash">\</div>
+                <div class="specialTegn lodretStreg">|</div>
+                <div class="specialTegn parentesStart">(</div>
+                <div class="specialTegn parentesSlut">)</div>
+                <div class="specialTegn bracketsStart">[</div>
+                <div class="specialTegn bracketsSlut">]</div>
+                <div class="specialTegn akkoladeStart">{</div>
+                <div class="specialTegn akkoladeSlut">}</div>
+                <div class="specialTegn mindreEnd">&lt;</div>
+                <div class="specialTegn stoerreEnd">></div>
+                <div class="specialTegn udraabstegn">!</div>
+                <div class="specialTegn dollartegn">$</div>
+                <div class="specialTegn hashtag">#</div>
+                <div class="specialTegn procenttegn">%</div>
+                <div class="specialTegn snabelA">@</div>
+                <div class="specialTegn tilde">~</div>
+                <div class="specialTegn plus">+</div>
+                <div class="specialTegn bindestreg">-</div>
+                <div class="specialTegn underscore">_</div>
+                <div class="specialTegn lighedstegn">=</div>
+                <div class="specialTegn asterisk">*</div>
+                <div class="specialTegn backtick">`</div>
+                <div class="specialTegn cirkumfleks">^</div>
+                <div class="specialTegn accenttegn">'</div>
+                <div class="specialTegn anfoerselstegn">"</div>
+                <div class="specialTegn spoergsmaalstegn">?</div>
+            </div>
+            <div class="underGridMinusHackerBaren">
+                <p class="vaelgTegn">Vælg 1-2 tegn du vil bruge i din kode.</p>
+            </div>
+            <div class="hackerBarenBeige">
+                <div class="hackerensFremskridtBeige">
+                    <p>Hackerens fremskridt</p>
+                </div>
+            <div class="loadingBar">
+                <div class="bar">
+                    <div id="barTegn" class="blackLoadingBar"></div>
+                </div>
+                <div class="procent">68%</div>
+            </div>
+        </div>
+            <div class="arrowBtn nextPhase" id="specialtegnEnter">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div id="sammensæt">
+            <div class="beigeBoxS">
+                <img src="img/Guide-siddende.png" class="lucaSidder" alt="Luca forklarer">
+                <h2>Sammensæt din<br>
+                    adgangskode</h2>
+                <p>Nu er tiden kommet til at lave dit kodeord. <br>
+                    Sammensæt de forskellige dele du har<br>
+                    samlet, ved at trække dem ned på midten af<br>
+                    skærmen.</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="dragDrop">
+            <div class="kodeData">
+                <p class="antalTegn">tegn</p>
+            </div>
+            <div id="kodeDrag"></div>
+            <div id="kodeDrop"></div>
+            <p id="dragDropTekst">Drag & drop i den rækkefølge, som du bedst kan huske.</p>
+            <div class="arrowBtn nextPhase" id="dragDropBtn">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="hackerBarenBeige">
+                <div class="hackerensFremskridtBeige">
+                    <p>Hackerens fremskridt</p>
+                </div>
+            <div class="loadingBar">
+                <div class="bar">
+                    <div id="barDragDrop" class="blackLoadingBar"></div>
+                </div>
+                <div class="procent">77%</div>
+            </div>
+        </div>
+        </div>
+        <div id="dinKode">
+            <i class="fas fa-info-circle infoGreen"></i>
+            <div class="kodeData">
+                <p class="antalTegn">tegn</p>
+            </div>
+            <h2>Sådan ser din adgangskode ud:</h2>
+            <p id="kodeKombineret"></p>
+            <img class="ladyMirror" src="img/Guide-siddende-crop.png" alt="dame ved computer">
+            <div class="arrowBtn nextPhase">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        </div>
+        <div id="storeBogstaver">
+            <div class="beigeBoxS">
+                <img src="img/Guide-siddende.png" class="lucaSidder" alt="Luca forklarer">
+                <h2>Store bogstaver</h2>
+                <p>Hackeren er tæt på at nå ind til dine<br>
+                    oplysninger, men bare rolig, der er stadig<br>
+                    håb.<br>
+                    Med dit nye kodeord kan du sikre dine konti.<br>
+                    Det er dog ikke en god idé at bruge den<br>
+                    samme adgangskode flere steder.<br>
+                    Vi mangler altså lidt variation, og det er her<br>
+                    de store bogstaver kommer ind i billedet.</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="indtast">
+            <div class="kodeData kodeDataGreenBg">
+                <p class="antalTegn" id="antalTegnIndtast">0 tegn</p>
+                <p class="dinAdgangskode">Din adgangskode:</p>
+                <p class="kodeDele" id="kodeordIndtast">input</p>
+            </div>
+            <p id="kontoKodeSkift">Din adgangskode til <span id="kontoSpan">Google</span>:</p>
+            <div id="midterDelKonto">
+                <div>
+                    <input id="inputFeltKonto" type="text">
+                </div>
+                <div class="arrowBtnInput" id="kontoEnter">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="hackerBaren">
+                <div class="hackerensFremskridt">
+                    <p>Hackerens fremskridt</p>
+                </div>
+                <div class="loadingBar">
+                    <div id="myProgress" class="bar">
+                        <div id="barIndtast" class="blackLoadingBar"></div>
+                    </div>
+                    <div id="showProcent" class="procent">90%</div>
+                </div>
+            </div>
+            <div class="lilleBeigeBox" id="kontoBeigeBox">
+                <p>Indsæt store bogstaver i kodeordet til
+                    dine konti. Brug så mange bogstaver du
+                    har lyst til. Placeringen bestemmer du
+                    selv.
+                <p>Eks. <strong>L</strong>inkedI<strong>n</strong> = <strong>LN</strong><br>
+                    <strong>L</strong><span id="eks1"></span><strong>N</strong><br>
+                    <span id="eks2-1"></span><strong>LN</strong><span id="eks2-2"></span></p>
+            </div>
+            <img class="vector" src="img/Guide-siddende-crop.png" alt="vector">
+        </div>
+        <div id="tillykke">
+            <div class="beigeBoxM">
+                <img src="img/Guide-staaende.png" alt="Luca">
+                <h2>Tillykke!</h2>
+                <h3>Du stoppede hackeren!</h3>
+                <p id="tillykkeTekst">Det var faktisk det eneste, der skulle til for at<br>
+                    forhindre hackeren. Mon ikke det ville være det værd<br>
+                    for at beskytte dine personlige informationer?</p>
+                <p id="lavetAf">Lavet af:<br>
+                    Line, Ann-sofie, Cecilie, Sofia og Panida</p>
+                <div class="næsteBtn nextPhase">Næste</div>
+            </div>
+        </div>
+        <div id="godeRaad">
+            <div class="beigeBoxL">
+                <img src="img/Guide-staaende.png" alt="Luca">
+                <h4>Tak for spil</h4>
+                <h2>Nogle gode råd til at gøre<br>
+                    dine konti mere sikre </h2>
+                <p id="passwordManager">Hvis det virker uoverskueligt at huske dine adgangskoder,<br>
+                     kan du bruge en <b>'password manager'</b>. Det er et program,<br>
+                     du kan bruge til at holde styr på alle dine kodeord.</p>
+                <p id="toTrin">Der er mange steder, hvor du kan slå <b>'to-trins<br>
+                    godkendelse'</b> til, så du skal bekræfte din identitet på<br>
+                    mobilen, når du logger ind. Dermed er du ekstra sikker.</p>
+                <div class="btnBoks">
+                    <div class="godeRaadBtn spilIgenBtn">Spil igen</div>
+                    <div class="godeRaadBtn nextPhase" id="seKoderBtn">Se kodeord</div>
+                </div>
+            </div>
+        </div>
+        <div id="kopierKoder">
+            <div class="beigeBoxL">
+                <img src="img/Guide-staaende.png" alt="Luca">
+                <div id="kontiGrid">
+                    <p>Din adgangskode til Google</p>
+                    <p>Kopier</p>
+                    <textarea name="google" id="googlesKode" class="kontoKode" rows="1" readonly>Google adgangskode</textarea>
+                    <i id="copyGoogle" class="fas fa-copy"></i>
+
+                    <p>Din adgangskode til Facebook</p>
+                    <p>Kopier</p>
+                    <textarea name="facebook" id="facebooksKode" class="kontoKode" rows="1" readonly>Facebook adgangskode</textarea>
+                    <i id="copyFacebook" class="fas fa-copy"></i>
+
+                    <p>Din adgangskode til Netbank</p>
+                    <p>Kopier</p>
+                    <textarea name="netbank" id="netbanksKode" class="kontoKode" rows="1" readonly>Netbank adgangskode</textarea>
+                    <i id="copyNetbank" class="fas fa-copy"></i>
+                </div>
+                <div class="btnBoks">
+                    <div class="godeRaadBtn spilIgenBtn">Spil igen</div>
+                    <div class="godeRaadBtn" id="tilbageBtn">Tilbage</div>
+                </div>
+            </div>
+        </div>
+        <div id="hacket">
+            <h2>Du er blevet hacket!</h2>
+            <p>Hackeren fik fat i dine personlige oplysninger.</p>
+            <img src="img/Hacker.png" alt="Hacker">
+            <button class="prøvIgen" id="prøvIgen">Prøv igen</button>
+        </div>
+    </main>
+</body>
+</html>

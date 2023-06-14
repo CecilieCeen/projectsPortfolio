@@ -1,0 +1,3 @@
+to import userPic.json tom mongodb use
+
+mongoimport --jsonArray --db gameusers --collection profilepics --file userpic.json
